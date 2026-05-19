@@ -1,0 +1,11 @@
+# --- Terraform Folders ---
+.terraform/
+
+# --- Terraform State Files ---
+*.tfstate
+*.tfstate.*
+
+# --- Variable Files ---
+*.tfvars
+*.tfvars.json
+
