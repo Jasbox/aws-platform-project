@@ -13,18 +13,18 @@ resource "aws_alb" "demo_alb" {
 }
 
 resource "aws_alb_target_group" "demo_target_group" {
-  name     = "demo-target-group"
-  port     = 80
-  protocol = "HTTP"
-  vpc_id   = aws_vpc.vpc.id
+  name        = "demo-target-group"
+  port        = 80
+  protocol    = "HTTP"
+  vpc_id      = aws_vpc.vpc.id
   target_type = "ip"
   health_check {
-    path     = "/"
-    interval = "30"
-    timeout  = "5"
-    healthy_threshold = 2
+    path                = "/"
+    interval            = "30"
+    timeout             = "5"
+    healthy_threshold   = 2
     unhealthy_threshold = 2
-    matcher = "200"
+    matcher             = "200"
   }
 
   tags = {
