@@ -22,3 +22,8 @@ output "ecs_security_group_id" {
   description = "The ID of the ECS Security Group"
   value       = aws_security_group.ecs_security_group.id
 }
+
+output "alb_dns_name" {
+  description = "The DNS name of the load balancer"
+  value       = aws_alb.demo_alb.dns_name
+}
